@@ -208,3 +208,31 @@
     box-shadow: 26vmin 0 3.7425713767337387vmin currentColor;
 }
 
+svg {
+                overflow:none;
+                padding:10px;
+                float:left;
+                width:500px;
+                height:400px;
+                background: none;
+            }
+            
+            text    {
+                fill:#bb6d82;
+                text-anchor:left;
+                font-size:12px;
+                font-family:sans-serif,Helvetica,Arial;
+                font-weight:bold;
+            }
+            
+            .iconPlain  {
+                fill:#a7a59b;   
+            }
+            
+            .iconSelected  {
+                fill:#bb6d82;   
+            }
+            
+            rect    {
+                fill:#00000000;
+            }

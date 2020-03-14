@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./bootstrap.min.css">
     <script src="./countUp.js"></script>
 
+    <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.min.js"></script>
 
     <title>Coronavirus calculator</title>
@@ -67,6 +68,7 @@
     <div class="row">
       <div class="mt-5 col-lg-12 text-center">
         <h1 id="output"></h1>
+        <div id="pictograph"></div>
         <div class="" id="facts"></div>
         <p class="lead" id="formula"></p>
         <div id="coffee" style="margin-bottom:30px"></div>
@@ -98,6 +100,13 @@
           <li class="list-group-item">
           {{label}}: {{value}}
           </li>
+        {{/arr}}
+      </ul>
+    </script>
+
+    <script id="iconsTemplate" type="x-tmpl-mustache">
+        {{#arr}}
+          <img src="./{{file}}" width="10" height="13" />
         {{/arr}}
       </ul>
     </script>

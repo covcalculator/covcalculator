@@ -96,8 +96,24 @@ function calculate() {
   let totalDeathRate = calculateDeathRate(data.age, data.risks)
   // (medical conditions death risk / average death risk) * death rate by age
   updateCounter(totalDeathRate)
+  console.log(totalDeathRate)
+  drawPictograph(totalDeathRate.resultDeathRisk)
 }
 
 $('.corona_input').click(() => calculate())
 
 slider.onchange = () => calculate()
+
+
+
+// pictograph
+function drawPictograph(percent) {
+  let arr = []
+  for (let i = 0; i < 1000; i++) {
+    arr.push({ file: i < percent * 1000 ? "ico2.png" : "ico.png"})
+  }
+  var template = document.getElementById('iconsTemplate').innerHTML;
+  var rendered = Mustache.to_html(template, { arr });
+
+  document.getElementById('pictograph').innerHTML = rendered;
+}
