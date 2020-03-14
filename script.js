@@ -117,3 +117,5 @@ function drawPictograph(percent) {
 
   document.getElementById('pictograph').innerHTML = rendered;
 }
+
+calculate()
